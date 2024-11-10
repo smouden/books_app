@@ -1,0 +1,185 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+	<style>
+
+		.my-commands {
+			margin-top: 20px;
+		}
+
+		.order-separator {
+			display: flex;
+			align-items: center;
+			margin: 20px 0;
+			text-align: center;
+		}
+
+		.order-separator span {
+			font-size: 14px;
+			color: #888;
+			background-color: #fff;
+			padding: 0 10px;
+			z-index: 1;
+		}
+
+		.order-separator::before,
+		.order-separator::after {
+			content: "";
+			flex: 1;
+			border-top: 1px solid #000;
+			margin: 0 10px;
+		}
+
+		.order {
+			border: 1px solid #e1e1e1;
+			padding: 15px;
+			border-radius: 8px;
+			margin-bottom: 15px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		.order-content {
+			display: flex;
+			justify-content: space-between;
+			width: 100%;
+		}
+
+		.order-details h5 {
+			font-size: 16px;
+			font-weight: bold;
+			margin: 0;
+		}
+
+		.order-details p {
+			margin: 0;
+			color: #888;
+		}
+
+		.order-status {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+		}
+
+		.status {
+			padding: 5px 15px;
+			border-radius: 20px;
+			color: #fff;
+			font-size: 12px;
+			text-transform: uppercase;
+		}
+
+		.status.delivered {
+			background-color: #28a745;
+		}
+
+		.status.canceled {
+			background-color: #dc3545;
+		}
+
+		.action-button {
+			padding: 5px 15px;
+			border-radius: 20px;
+			background-color: #ff6600;
+			color: #fff;
+			font-size: 12px;
+			text-decoration: none;
+			text-transform: uppercase;
+			cursor: pointer;
+		}
+
+		.action-text {
+			background-color: #ffd966;
+			padding: 5px 15px;
+			border-radius: 20px;
+			font-size: 12px;
+			text-transform: uppercase;
+		}
+	</style>
+
+{% endblock %}
+
+
+{% block body %}
+	<!-- Start Banner Area -->
+	<section class="banner-area organic-breadcrumb">
+		<div class="container">
+			<div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
+				<div class="col-first">
+					<h1>
+						My orders page</h1>
+					<nav class="d-flex align-items-center">
+						<a href="#">
+							<span class="lnr lnr-arrow-right"></span>
+						</a>
+						<a href="category.html">Show your orders</a>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End Banner Area -->
+
+
+	<!-- start my commands -->
+	<section class="my-commands">
+		<div class="container">
+			<h2>My Orders</h2>
+
+			<!-- Commande 1 -->
+			<div class="order-separator">
+				<span>Command of June 29, 2024</span>
+			</div>
+
+			<div class="order">
+				<div class="order-content">
+					<div class="order-details">
+						<h5>The first try</h5>
+						<p>Price $150.0 / Delivery $19.0</p>
+					</div>
+					<div class="order-status">
+						<span class="status delivered">delivered</span>
+						<a href="#" class="action-button">Give feedback</a>
+					</div>
+				</div>
+			</div>
+			<div class="order">
+				<div class="order-content">
+					<div class="order-details">
+						<h5>The first try</h5>
+						<p>Price $150.0 / Delivery $19.0</p>
+					</div>
+					<div class="order-status">
+						<span class="status delivered">delivered</span>
+						<a href="#" class="action-button">Give feedback</a>
+					</div>
+				</div>
+			</div>
+
+			<!-- Commande 2 -->
+			<div class="order-separator">
+				<span>Command of June 30, 2024</span>
+			</div>
+
+			<div class="order">
+				<div class="order-content">
+					<div class="order-details">
+						<h5>The second try</h5>
+						<p>Price $150.0 / Delivery $19.0</p>
+					</div>
+					<div class="order-status">
+						<span class="status canceled">canceled</span>
+						<span class="action-text">Lorem ipsum</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- end my commands -->
+
+{% endblock %}
+
+
+{% block javascripts %}{% endblock %}
